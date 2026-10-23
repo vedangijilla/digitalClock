@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #512da8, #0077b6);
+}
+
+.clock-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 25px;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+.clock-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ff4ecd, #7c4dff);
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #d7d9f5;
+    font-size: 14px;
+}
+
+#time {
+    margin-top: 35px;
+    font-size: clamp(35px, 9vw, 54px);
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(90deg, #59f0ff, #d5a6ff, #ff91d5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#ampm {
+    margin-top: 12px;
+    color: #ff9ce6;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.line {
+    width: 80%;
+    height: 1px;
+    margin: 25px auto;
+    background: linear-gradient(90deg, transparent, #d7a5ff, transparent);
+}
+
+#date {
+    color: #f0edff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.live {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding: 10px 17px;
+    border: 1px solid rgba(65, 255, 175, 0.3);
+    border-radius: 25px;
+    color: #75ffc0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.live span {
+    width: 8px;
+    height: 8px;
+    background: #52ffae;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #52ffae;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 400px) {
+    .clock-card {
+        padding: 30px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #time {
+        letter-spacing: 0;
+    }
+
+    #date {
+        font-size: 13px;
+    }
+}
